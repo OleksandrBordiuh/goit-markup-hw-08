@@ -1,0 +1,32 @@
+// general rules for Advantages
+.advantages {
+  display: flex;
+
+  .item {
+    width: calc((100% - 3 * 30px) / 4);
+  }
+
+  .item + .item {
+    margin-left: 30px;
+  }
+}
+
+// rules for Advantages block
+.advantages {
+  &-thumb {
+    height: 120px;
+    margin-bottom: 30px;
+    padding: 25px 100px;
+    background-color: $secondaryBgColor;
+  }
+
+  .section-title {
+    margin-bottom: 10px;
+
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.14;
+    text-align: left;
+    text-transform: uppercase;
+  }
+}

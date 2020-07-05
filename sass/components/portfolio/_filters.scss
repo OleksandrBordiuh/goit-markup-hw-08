@@ -1,0 +1,27 @@
+.filters {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 50px;
+
+  .item + .item {
+    margin-left: 8px;
+  }
+
+  .button {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.62;
+    text-align: center;
+    transition: background-color 250ms $cubick, color 250ms $cubick;
+
+    &:hover,
+    &:focus {
+      background-color: $accentColor;
+      color: $primaryWhiteColor;
+    }
+  }
+
+  .button + .button {
+    margin-left: 8px;
+  }
+}
