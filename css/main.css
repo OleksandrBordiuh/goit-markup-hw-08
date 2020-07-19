@@ -114,35 +114,23 @@ a {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
   border-bottom: 1px solid #ececec;
 }
 
-.menu-button {
-  margin: 0;
-  padding: 0;
-  border: none;
-  background-color: transparent;
-}
-
-@media screen and (min-width: 768px) {
-  .menu-button {
-    display: none;
+@media screen and (max-width: 1199px) {
+  .main-nav {
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
   }
 }
 
-.menu-button .icon-cross {
-  display: none;
-}
-
-.menu-button.is-open .icon-cross {
-  display: block;
-}
-
-.menu-button.is-open .icon-menu {
-  display: none;
+@media screen and (min-width: 1200px) {
+  .main-nav {
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+  }
 }
 
 .menu-container {
@@ -176,6 +164,8 @@ a {
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
+    padding-top: 21px;
+    padding-bottom: 21px;
   }
 }
 
@@ -187,6 +177,9 @@ a {
   .site-nav {
     margin-bottom: 60px;
   }
+  .site-nav .item:not(:last-child) {
+    margin-bottom: 40px;
+  }
 }
 
 @media screen and (min-width: 768px) {
@@ -194,11 +187,17 @@ a {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    margin-right: 84px;
+  }
+  .site-nav .item:not(:last-child) {
+    margin-right: 50px;
   }
 }
 
-.site-nav .item:not(:last-child) {
-  margin-bottom: 40px;
+@media screen and (min-width: 1200px) {
+  .site-nav {
+    margin-right: 305px;
+  }
 }
 
 .site-nav .link {
@@ -286,6 +285,31 @@ a {
 .contacts-icon :hover,
 .contacts-icon :focus {
   fill: #2196f3;
+}
+
+.menu-button {
+  margin: 0;
+  padding: 0;
+  border: none;
+  background-color: transparent;
+}
+
+@media screen and (min-width: 768px) {
+  .menu-button {
+    display: none;
+  }
+}
+
+.menu-button .icon-cross {
+  display: none;
+}
+
+.menu-button.is-open .icon-cross {
+  display: block;
+}
+
+.menu-button.is-open .icon-menu {
+  display: none;
 }
 
 .logo {
