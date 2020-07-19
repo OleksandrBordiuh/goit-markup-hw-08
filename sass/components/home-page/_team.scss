@@ -1,0 +1,54 @@
+.our-team {
+  background-color: $secondaryBgColor;
+}
+
+.team {
+  margin: -15px;
+
+  @media screen and (min-width: $tablet) {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .item {
+    margin: 15px;
+    padding-bottom: 24px;
+    border-radius: 4px;
+    background-color: $primaryWhiteColor;
+    box-shadow: 0px 2px 1px rgba(0, 0, 0, 0.2), 0px 1px 1px rgba(0, 0, 0, 0.14),
+      0px 1px 3px rgba(0, 0, 0, 0.12);
+
+    @media (max-width: 767px) {
+      &:not(:last-child) {
+        margin-bottom: 30px;
+      }
+    }
+
+    @media (min-width: $tablet) {
+      flex-basis: calc((100% - 4 * 15px) / 2);
+    }
+
+    @media (min-width: $desktop) {
+      flex-basis: calc((100% - 8 * 15px) / 4);
+    }
+  }
+
+  .photo-employee {
+    width: 100%;
+    margin-bottom: 30px;
+  }
+
+  .section-title {
+    margin-bottom: 10px;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.19;
+    text-align: center;
+  }
+
+  .position {
+    margin-bottom: 16px;
+    font-size: 16px;
+    line-height: 1.19;
+    text-align: center;
+  }
+}

@@ -21,35 +21,53 @@
         <a href="./index.html" class="logo"
           ><span class="logo-blue">Web</span> Studio</a
         >
-        <nav>
-          <ul class="site-nav">
+        <button
+          type="button"
+          class="menu-button"
+          aria-expanded="false"
+          aria-controls="menu-container"
+          data-menu-button
+        >
+          <svg
+            width="40"
+            height="40"
+            aria-label="Переключатель мобильного меню"
+          >
+            <use class="icon-cross" href="./images/sprite.svg#cross"></use>
+            <use class="icon-menu" href="./images/sprite.svg#menu"></use>
+          </svg>
+        </button>
+        <div class="menu-container" id="menu-container" data-menu>
+          <nav>
+            <ul class="site-nav">
+              <li class="item">
+                <a href="./index.html" class="link current">Студия</a>
+              </li>
+              <li class="item">
+                <a href="./portfolio.html" class="link">Портфолио</a>
+              </li>
+              <li class="item"><a href="" class="link">Контакты</a></li>
+            </ul>
+          </nav>
+          <ul class="contacts-nav">
             <li class="item">
-              <a href="./index.html" class="link current">Студия</a>
+              <a href="mailto:info@devstudio.com" class="link">
+                <svg class="contacts-icon" width="16" height="11.2">
+                  <use href="./images/sprite.svg#envelope"></use>
+                </svg>
+                info@devstudio.com
+              </a>
             </li>
             <li class="item">
-              <a href="./portfolio.html" class="link">Портфолио</a>
+              <a href="tel:+380961111111" class="link">
+                <svg class="contacts-icon" width="10" height="15">
+                  <use href="./images/sprite.svg#vector"></use>
+                </svg>
+                +38 096 111 11 11
+              </a>
             </li>
-            <li class="item"><a href="" class="link">Контакты</a></li>
           </ul>
-        </nav>
-        <ul class="contacts-nav">
-          <li class="item">
-            <a href="mailto:info@devstudio.com" class="link">
-              <svg class="contacts-icon" width="16" height="11.2">
-                <use href="./images/sprite.svg#envelope"></use>
-              </svg>
-              info@devstudio.com
-            </a>
-          </li>
-          <li class="item">
-            <a href="tel:+380961111111" class="link">
-              <svg class="contacts-icon" width="10" height="15">
-                <use href="./images/sprite.svg#vector"></use>
-              </svg>
-              +38 096 111 11 11
-            </a>
-          </li>
-        </ul>
+        </div>
       </div>
     </header>
 
@@ -197,28 +215,40 @@
           <ul class="list">
             <li class="item">
               <img
-                src="./images/laptop.jpg"
+                srcset="
+                  ./images/laptop-370.jpg 370w,
+                  ./images/laptop-740.jpg 740w
+                "
+                src="./images/laptop-370.jpg"
                 alt="ноутбук"
                 width="370"
-                height="294"
+                sizes="(min-width: 1200px) 33vw, (min-width: 768px) 50vw, 100vw"
               />
               <p class="services-name">Десктопные приложения</p>
             </li>
             <li class="item">
               <img
-                src="./images/cellphone.jpg"
+                srcset="
+                  ./images/cellphone-370.jpg 370w,
+                  ./images/cellphone-740.jpg 740w
+                "
+                src="./images/cellphone-370.jpg"
                 alt="мобильный телефон"
                 width="370"
-                height="294"
+                sizes="(min-width: 1200px) 33vw, (min-width: 768px) 50vw, 100vw"
               />
               <p class="services-name">Мобильные приложения</p>
             </li>
             <li class="item">
               <img
-                src="./images/monitor.jpg"
+                srcset="
+                  ./images/monitor-370.jpg 370w,
+                  ./images/monitor-740.jpg 740w
+                "
+                src="./images/monitor-370.jpg"
                 alt="монитор"
                 width="370"
-                height="294"
+                sizes="(min-width: 1200px) 33vw, (min-width: 768px) 50vw, 100vw"
               />
               <p class="services-name">Дизайнерские решения</p>
             </li>
@@ -233,9 +263,14 @@
           <ul class="team">
             <li class="item">
               <img
-                src="./images/john-smith.jpg"
+                srcset="
+                  ./images/n-kucherenko-270.jpg 270w,
+                  ./images/n-kucherenko-540.jpg 540w
+                "
+                src="./images/n-kucherenko-270.jpg"
                 alt="Николай Кучеренко"
                 class="photo-employee"
+                sizes="(min-width: 1200px) 25vw, (min-width: 768px) 50vw, 100vw"
               />
               <h3 class="section-title">Николай Кучеренко</h3>
               <p class="position">Product Designer</p>
@@ -272,9 +307,14 @@
             </li>
             <li class="item">
               <img
-                src="./images/martastewart.jpg"
+                srcset="
+                  ./images/o-ivanova-270.jpg 270w,
+                  ./images/o-ivanova-540.jpg 540w
+                "
+                src="./images/o-ivanova-270.jpg"
                 alt="Ольга Иванова"
                 class="photo-employee"
+                sizes="(min-width: 1200px) 25vw, (min-width: 768px) 50vw, 100vw"
               />
               <h3 class="section-title">Ольга Иванова</h3>
               <p class="position">Frontend Developer</p>
@@ -311,9 +351,14 @@
             </li>
             <li class="item">
               <img
-                src="./images/robertjakis.jpg"
+                srcset="
+                  ./images/a-shevchenko-270.jpg 270w,
+                  ./images/a-shevchenko-540.jpg 540w
+                "
+                src="./images/a-shevchenko-270.jpg"
                 alt="Андрей Шевченко"
                 class="photo-employee"
+                sizes="(min-width: 1200px) 25vw, (min-width: 768px) 50vw, 100vw"
               />
               <h3 class="section-title">Андрей Шевченко</h3>
               <p class="position">Marketing</p>
@@ -350,9 +395,14 @@
             </li>
             <li class="item">
               <img
-                src="./images/martindoe.jpg"
+                srcset="
+                  ./images/i-nikolaev-270.jpg 270w,
+                  ./images/i-nikolaev-540.jpg 540w
+                "
+                src="./images/i-nikolaev-270.jpg"
                 alt="Иван Николаев"
                 class="photo-employee"
+                sizes="(min-width: 1200px) 25vw, (min-width: 768px) 50vw, 100vw"
               />
               <h3 class="section-title">Иван Николаев</h3>
               <p class="position">UI Designer</p>
@@ -513,5 +563,6 @@
       <p class="copyright">2020 | Developed by GoIT Students</p>
     </footer>
     <script src="./js/modal.js"></script>
+    <script src="./js/menu.js"></script>
   </body>
 </html>

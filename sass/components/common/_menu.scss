@@ -1,0 +1,156 @@
+.main-nav {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid #ececec;
+}
+.menu-button {
+  margin: 0;
+  padding: 0;
+  border: none;
+  background-color: transparent;
+
+  @media screen and (min-width: 768px) {
+    display: none;
+  }
+}
+
+.menu-button .icon-cross {
+  display: none;
+}
+
+.menu-button.is-open .icon-cross {
+  display: block;
+}
+
+.menu-button.is-open .icon-menu {
+  display: none;
+}
+
+.menu-container {
+  z-index: 998;
+  background-color: $primaryWhiteColor;
+
+  @media screen and (max-width: 767px) {
+    display: none;
+    position: absolute;
+    top: 102%;
+    left: 0;
+    width: 100%;
+
+    padding: 60px;
+    text-align: center;
+
+    &.is-open {
+      display: block;
+    }
+  }
+
+  @media screen and (min-width: $tablet) {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
+
+.site-nav {
+  display: inline-block;
+
+  @media screen and (max-width: 767px) {
+    margin-bottom: 60px;
+  }
+
+  @media screen and (min-width: $tablet) {
+    display: flex;
+  }
+
+  .item:not(:last-child) {
+    margin-bottom: 40px;
+  }
+  .link {
+    padding-bottom: 8px;
+
+    color: $titleTextColor;
+    font-weight: 500;
+    letter-spacing: 0.02em;
+
+    transition: color 250ms $cubick;
+
+    @media screen and (max-width: 767px) {
+      font-size: 16px;
+      line-height: 1.31;
+    }
+  }
+  .link:hover,
+  .link:focus {
+    color: $accentColor;
+  }
+}
+
+.link.current {
+  color: $accentColor;
+
+  position: relative;
+
+  &::after {
+    content: "";
+
+    position: absolute;
+    bottom: 0;
+
+    display: block;
+    width: 100%;
+    height: 4px;
+    border-radius: 2px;
+    background-color: $accentColor;
+  }
+}
+
+.contacts-nav {
+  align-items: center;
+
+  @media screen and (max-width: 767px) {
+    .item:not(:last-child) {
+      margin-bottom: 16px;
+    }
+  }
+
+  @media screen and (min-width: $tablet) {
+    .item:not(:last-child) {
+      margin-bottom: 10px;
+    }
+  }
+}
+
+.contacts-nav {
+  .link {
+    color: $primaryTextColor;
+    font-weight: 500;
+    letter-spacing: 0.02em;
+
+    transition: color 250ms $cubick;
+
+    @media screen and (max-width: 767px) {
+      font-size: 16px;
+      line-height: 1.31;
+    }
+  }
+
+  .link:hover,
+  .link:focus {
+    color: $accentColor;
+  }
+}
+
+.contacts-icon {
+  margin-right: 10px;
+  fill: currentColor;
+
+  transition: fill 250ms $cubick;
+
+  :hover,
+  :focus {
+    fill: $accentColor;
+  }
+}

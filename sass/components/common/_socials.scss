@@ -1,0 +1,25 @@
+.socials {
+  display: inline-block;
+  height: 44px;
+  width: 44px;
+  padding: 12px;
+
+  fill: $primarySvgColor;
+  background-color: $primaryWhiteColor;
+  background-repeat: no-repeat;
+  background-position: center;
+  border-radius: 50%;
+
+  transition: background-color 250ms $cubick, 250ms $cubick, fill 250ms $cubick;
+}
+
+.socials:hover,
+.socials:focus {
+  background-color: $accentColor;
+  fill: $primaryWhiteColor;
+}
+
+.list-socials {
+  display: flex;
+  justify-content: space-evenly;
+}
